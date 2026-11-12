@@ -1,0 +1,5 @@
+{
+  "ENV": "production",
+  "USE_MOCK_API": false,
+  "API_BASE_URL": "https://api.kamkaj.example/v1"
+}

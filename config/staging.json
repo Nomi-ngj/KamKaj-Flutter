@@ -1,0 +1,5 @@
+{
+  "ENV": "staging",
+  "USE_MOCK_API": false,
+  "API_BASE_URL": "http://localhost:3000/v1"
+}

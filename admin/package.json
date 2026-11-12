@@ -1,0 +1,30 @@
+{
+  "name": "kamkaj-admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:staging": "dotenv -e env/staging.env -- next dev -p 3001",
+    "build:staging": "dotenv -e env/staging.env -- next build",
+    "start:staging": "dotenv -e env/staging.env -- next start -p 3001",
+    "build:production": "dotenv -e env/production.env -- next build",
+    "start:production": "dotenv -e env/production.env -- next start -p 3001",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "dotenv-cli": "^11.1.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "5.9"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

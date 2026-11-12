@@ -1,0 +1,55 @@
+{
+  "name": "kamkaj-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KamKaj Pro REST API (NestJS + PostgreSQL)",
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/main",
+    "dev:staging": "dotenv -e .env.staging -- nest start --watch",
+    "start:staging": "dotenv -e .env.staging -- node dist/main",
+    "start:production": "dotenv -e .env.production -- node dist/main",
+    "db:migrate:staging": "dotenv -e .env.staging -- ts-node scripts/migrate.ts",
+    "db:migrate:production": "dotenv -e .env.production -- ts-node scripts/migrate.ts",
+    "db:seed:staging": "dotenv -e .env.staging -- ts-node scripts/seed.ts",
+    "db:reset:staging": "dotenv -e .env.staging -- ts-node scripts/reset-staging.ts && npm run db:migrate:staging && npm run db:seed:staging",
+    "admin:create:production": "dotenv -e .env.production -- ts-node scripts/create-admin.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:studio:staging": "dotenv -e .env.staging -- drizzle-kit studio",
+    "admin:create:staging": "dotenv -e .env.staging -- ts-node scripts/create-admin.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^12.4.2",
+    "@nestjs/core": "^12.4.2",
+    "@nestjs/jwt": "^12.0.4",
+    "@nestjs/platform-express": "^12.4.2",
+    "@nestjs/serve-static": "^12.1.1",
+    "@nestjs/swagger": "^12.1.1",
+    "@nestjs/throttler": "^6.7.1",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "drizzle-orm": "^0.45.4",
+    "multer": "^2.5.0",
+    "pg": "^8.23.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^12.0.12",
+    "@nestjs/schematics": "^12.0.13",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "dotenv-cli": "^11.1.0",
+    "drizzle-kit": "^0.31.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

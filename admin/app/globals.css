@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+/* KamKaj brand tokens (same as the app's design system: primary #205695, secondary #F97316). */
+@theme {
+  --color-brand: #205695;
+  --color-brand-dark: #17406f;
+  --color-brand-soft: #e8f0fa;
+  --color-accent: #f97316;
+  --color-accent-soft: #fff1e6;
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+html,
+body {
+  background: #f6f7f9;
+  color: #1f2937;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  opacity: 0.4;
+}
